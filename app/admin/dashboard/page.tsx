@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useCallback } from 'react'
 import { createClientComponentClient } from '@supabase/auth-helpers-nextjs'
 import { toast } from 'react-hot-toast'
 
@@ -21,11 +21,7 @@ export default function Dashboard() {
   })
   const supabase = createClientComponentClient()
 
-  useEffect(() => {
-    fetchContents()
-  }, [])
-
-  const fetchContents = async () => {
+  const fetchContents = useCallback(async () => {
     const { data, error } = await supabase
       .from('website_content')
       .select('*')
@@ -37,7 +33,11 @@ export default function Dashboard() {
     }
 
     setContents(data)
-  }
+  }, [supabase])
+
+  useEffect(() => {
+    fetchContents()
+  }, [fetchContents])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
