@@ -1,4 +1,4 @@
-'use client'
+"use client";
 
 import { useState, useEffect } from 'react'
 import Link from 'next/link'
@@ -25,51 +25,53 @@ export default function Hero() {
   }, [])
 
   return (
-    <div className="relative isolate min-h-screen">
+    <div className="relative min-h-[80vh] flex items-start pt-24 px-6 sm:px-12 lg:px-16">
+      {/* Background Image */}
       <div className="absolute inset-0 -z-10">
-        <div className="relative w-full h-full">
-          <Image
-            src="/hero-bg.jpg"
-            alt="Modern garage background"
-            fill
-            className="object-cover brightness-50"
-            priority
-            quality={100}
-          />
-        </div>
-        <div className="absolute inset-0 bg-gradient-to-b from-dark-100/90 to-dark-100/70" />
+        <Image
+          src="/hero-bg.jpg"
+          alt="Modern garage background"
+          fill
+          className="object-cover brightness-75"
+          priority
+          quality={100}
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 to-black/40" />
       </div>
-      <div className="relative mx-auto max-w-7xl px-6 py-32 sm:py-48 lg:px-8">
-        <div className="lg:grid lg:grid-cols-12 lg:gap-x-8 lg:px-8">
-          <div className="lg:col-span-7 lg:px-0 lg:pb-56 lg:pt-48 xl:col-span-6">
-            <div className="mx-auto max-w-2xl lg:mx-0">
-              <div className="mb-8">
-                <span className="inline-block rounded-full bg-primary-600/10 px-4 py-1.5 text-sm font-semibold leading-6 text-primary-500 ring-1 ring-inset ring-primary-500/20">
-                  {content.hero_subtitle}
-                </span>
-              </div>
-              <h1 className="mt-6 text-4xl font-bold tracking-tight text-white sm:text-6xl lg:text-7xl">
-                {content.hero_title}
-              </h1>
-              <p className="mt-6 text-lg leading-8 text-gray-300">
-                {content.hero_description}
-              </p>
-              <div className="mt-10 flex items-center gap-x-6">
-                <Link
-                  href="/book"
-                  className="rounded-md bg-primary-600 px-5 py-3 text-base font-semibold text-white shadow-sm hover:bg-primary-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 transition-colors"
-                >
-                  {content.cta_primary}
-                </Link>
-                <Link 
-                  href="/services" 
-                  className="text-base font-semibold leading-6 text-white hover:text-primary-500 transition-colors"
-                >
-                  {content.cta_secondary} <span aria-hidden="true">→</span>
-                </Link>
-              </div>
-            </div>
-          </div>
+
+      {/* Content Wrapper */}
+      <div className="relative mx-auto max-w-[900px] text-center">
+        {/* Subtitle */}
+        <div className="mb-4">
+          <span className="inline-block rounded-full bg-primary-600/20 px-4 py-1.5 text-sm font-semibold text-primary-400 ring-1 ring-primary-500/30">
+            {content.hero_subtitle}
+          </span>
+        </div>
+
+        {/* Title */}
+        <h1 className="text-5xl sm:text-6xl font-extrabold text-white mb-6 leading-tight">
+          {content.hero_title}
+        </h1>
+
+        {/* Description */}
+        <p className="text-lg text-gray-300 mb-8 leading-relaxed">
+          {content.hero_description}
+        </p>
+
+        {/* Call to Action Buttons */}
+        <div className="flex flex-wrap justify-center lg:justify-center items-center gap-4">
+          <Link
+            href="/book"
+            className="rounded-lg bg-primary-600 px-6 py-3 text-base font-semibold text-white shadow-md hover:bg-primary-500 transition-transform hover:scale-105"
+          >
+            {content.cta_primary}
+          </Link>
+          <Link 
+            href="/services" 
+            className="text-base font-semibold leading-6 text-white hover:text-primary-400 transition-colors"
+          >
+            {content.cta_secondary} <span aria-hidden="true">→</span>
+          </Link>
         </div>
       </div>
     </div>
