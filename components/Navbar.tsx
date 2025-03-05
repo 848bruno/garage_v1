@@ -87,7 +87,7 @@ export default function Navbar() {
                   href="/book"
                   className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-300 hover:bg-dark-200 hover:text-primary-500"
                 >
-                  Book
+                  Book Now
                 </Link>
               </div>
             </div>
