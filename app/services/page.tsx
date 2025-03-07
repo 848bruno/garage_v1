@@ -5,19 +5,19 @@ const services = [
   {
     name: 'Oil Change Service',
     description: 'Regular oil changes are crucial for maintaining your engine\'s performance and longevity.',
-    price: 'From $79.99',
+    price: 'From KSH10,278.72',
     image: 'https://images.unsplash.com/photo-1597766353939-aee87a830f08?auto=format&fit=crop&w=800&q=80',
   },
   {
     name: 'Brake Service',
     description: 'Complete brake inspection and repair service to ensure your safety on the road.',
-    price: 'From $249.99',
+    price: 'From KSH32,123.72',
     image: 'https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?auto=format&fit=crop&w=800&q=80',
   },
   {
     name: 'Engine Diagnostics',
     description: 'Advanced diagnostic testing to identify and resolve engine issues.',
-    price: 'From $89.99',
+    price: 'From KSH11,563.72',
     image: 'https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=800&q=80',
   },
 ]
