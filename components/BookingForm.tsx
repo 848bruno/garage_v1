@@ -12,11 +12,11 @@ const timeSlots = [
 ]
 
 const services = [
-  { id: 'oil-change', name: 'Oil Change Service', price: '$79.99' },
-  { id: 'brake-service', name: 'Brake Service', price: '$249.99' },
-  { id: 'tire-rotation', name: 'Tire Rotation', price: '$49.99' },
-  { id: 'engine-diagnostic', name: 'Engine Diagnostic', price: '$89.99' },
-  { id: 'ac-service', name: 'AC Service', price: '$129.99' },
+  { id: 'oil-change', name: 'Oil Change Service', price: 'KSH10,278.72' },
+  { id: 'brake-service', name: 'Brake Service', price: 'KSH32,12.72' },
+  { id: 'tire-rotation', name: 'Tire Rotation', price: 'KSH6,423.72' },
+  { id: 'engine-diagnostic', name: 'Engine Diagnostic', price: 'KSH11,563.72' },
+  { id: 'ac-service', name: 'AC Service', price: 'KSH16,703.72' },
 ]
 
 export default function BookingForm() {
