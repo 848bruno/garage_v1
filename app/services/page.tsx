@@ -6,7 +6,7 @@ const services = [
     name: 'Oil Change Service',
     description: 'Regular oil changes are crucial for maintaining your engine\'s performance and longevity.',
     price: 'From KSH10,278.72',
-    image: 'https://images.unsplash.com/photo-1597766353939-aee87a830f08?auto=format&fit=crop&w=800&q=80',
+    image: '/components/asset/subaru.png',
   },
   {
     name: 'Brake Service',
