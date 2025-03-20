@@ -44,14 +44,14 @@ export default function ContactPage() {
             <div className="bg-dark-200 p-6 rounded-lg">
               <h3 className="text-base font-semibold leading-7 text-white">Location</h3>
               <p className="mt-2 text-base leading-7 text-gray-300">
-                123 Auto Street<br />
-                Cartown, ST 12345
+                MP-SHA HOSPITAL<br />
+                Nairobi, ST 12345
               </p>
             </div>
             <div className="bg-dark-200 p-6 rounded-lg">
               <h3 className="text-base font-semibold leading-7 text-white">Contact Info</h3>
               <p className="mt-2 text-base leading-7 text-gray-300">
-                Phone: (555) 123-4567<br />
+                Phone: (254) 0114939391<br />
                 Email: info@autocarepro.com
               </p>
             </div>
