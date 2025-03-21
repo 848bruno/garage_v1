@@ -1,17 +1,19 @@
-import { createClient } from '@/utils/supabase/server';
+'use client'
 
-export default async function Notes() {
-  const supabase = await createClient();
-  const { data: notes } = await supabase.from("notes").select();
+import { createClient } from '@/utils/supabase/client'
+import { useEffect, useState } from 'react'
 
-  return (
-    <div className="max-w-lg mx-auto mt-10 p-4 bg-gray-100 rounded-lg shadow">
-      <h1 className="text-2xl font-bold mb-4">Notes</h1>
-      <ul className="list-disc pl-5">
-        {notes?.map((note) => (
-          <li key={note.id} className="text-lg text-gray-700">{note.title}</li>
-        ))}
-      </ul>
-    </div>
-  );
+export default function Page() {
+  const [notes, setNotes] = useState<any[] | null>(null)
+  const supabase = createClient()
+
+  useEffect(() => {
+    const getData = async () => {
+      const { data } = await supabase.from('notes').select()
+      setNotes(data)
+    }
+    getData()
+  }, [])
+
+  return <pre>{JSON.stringify(notes, null, 2)}</pre>
 }
